@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Title</title>
+    </head>
+    <body onload="loadProjects('created');">
+        <div class="container">
+            <div id="projects" class="mt-5">
+                <div class="row">
+                    <div class="col s12">
+                        <h4 id="message" class="d-flex justify-content-center">Our projects</h4>
+                        <h6 id="message" class="d-flex justify-content-center">(github repositories, can choose the sorting criteria)</h6>
+                        
+                        <div class="row">
+                            <div class="d-flex justify-content-center">
+                                <button onclick="loadProjects('created')" type="button" class="btn btn-primary mx-2">CREATION DATE</button> 
+                                <button onclick="loadProjects('full_name')" type="button" class="btn btn-primary mx-2">NAME</button>
+                                <button onclick="loadProjects('updated')" type="button" class="btn btn-primary mx-2">UPDATE DATE</button>
+                            </div>
+                        </div>
+                        
+                        <table id="projectsTable" class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 30%">Name</th>
+                                    <th class="text-center" style="width: 15%">Created</th>
+                                    <th class="text-center" style="width: 15%">Last update</th>
+                                    <th class="text-center" style="width: 20%">Language (most used)</th>
+                                    <th class="text-center" style="width: 20%">Download</th>
+                                </tr>
+                            </thead>
+                            <tbody id="projectTableContent">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <ul id="pagination" class="pagination"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5"><h3>We use our <a href="https://github.com/bakincode/loadit">loadit library</a> to display this table. You can use this in your personal website!</h3></div>
+
+
+        <!-- jquery library CDN and bootstrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    
+        <!-- our libraries -->
+        <script type="text/javascript" src="loadit-js/app.js"></script>
+        <script type="text/javascript" src="loadit-js/projects-content.js"></script>
+        <script type="text/javascript" src="loadit-js/projects-pagination.js"></script>
+        <script type="text/javascript" src="loadit-js/projects-table.js"></script>
+        <script type="text/javascript" src="loadit-js/utils.js"></script>
+        <script type="text/javascript" src="loadit-js/variables.js"></script>
+
+    </body>
+</html>
